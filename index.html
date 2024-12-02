@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="IP Address Tracker is a website provide to you information like location, Timezone and ISP about the IP Address that you search it in the map."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <main>
+      <!-- start header -->
+      <header>
+        <h1>IP Address Tracker</h1>
+        <div class="search-box">
+          <input
+            type="text"
+            name="ip"
+            placeholder="Search for any IP address or domain"
+          />
+          <button>
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- start location box -->
+      <div class="location-info">
+        <div class="box">
+          <p class="box-name">IP Address</p>
+          <p class="address"></p>
+        </div>
+        <div class="box">
+          <p class="box-name">Location</p>
+          <p class="location"></p>
+        </div>
+        <div class="box">
+          <p class="box-name">Timezone</p>
+          <div>
+            <span>UTC </span>
+            <p class="timezone"></p>
+          </div>
+        </div>
+        <div class="box">
+          <p class="box-name">ISP</p>
+          <p class="isp"></p>
+        </div>
+      </div>
+      <!-- end location box -->
+      <!-- start the map -->
+      <div class="the-map" id="map"></div>
+      <!-- end the map -->
+    </main>
+    <script src="js/main.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </body>
+</html>

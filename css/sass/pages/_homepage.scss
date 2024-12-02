@@ -1,0 +1,29 @@
+/* start the map */
+.the-map {
+  min-height: calc(100vh - 280px);
+  .leaflet-marker-icon {
+    margin-left: -10px !important;
+    margin-top: -31px !important;
+    width: 20px !important;
+    height: 30px !important;
+  }
+  .leaflet-interactive {
+    stroke: #453f9a;
+    fill: #5d80eb;
+  }
+  .leaflet-control-attribution {
+    display: none;
+  }
+  .leaflet-left {
+    left: 0px;
+    display: none;
+  }
+  @include lg {
+    @media (min-width: #{$screen-lg-min}) {
+      .leaflet-left {
+        display: block;
+      }
+    }
+  }
+}
+/* end the map */

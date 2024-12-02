@@ -1,0 +1,292 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* start header */
+header {
+  background-image: url("../images/pattern-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+  position: relative;
+}
+
+@media (min-width: 576px) and (min-width: 576px) {
+  header {
+    background-image: url("../images/pattern-bg-desktop.png");
+  }
+}
+
+header h1 {
+  color: white;
+  font-weight: 700;
+}
+
+header .search-box {
+  background-color: white;
+  width: 90%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  header .search-box {
+    width: 50%;
+  }
+}
+
+header .search-box input {
+  border: none;
+  outline: none;
+  width: calc(100% - 50px);
+  padding: 18px 20px;
+  height: 100%;
+  font-size: 16px;
+  color: #2b2b2b;
+  caret-color: #2b2b2b;
+  cursor: pointer;
+}
+
+header .search-box input::-webkit-input-placeholder {
+  color: #969696;
+}
+
+header .search-box input:-ms-input-placeholder {
+  color: #969696;
+}
+
+header .search-box input::-ms-input-placeholder {
+  color: #969696;
+}
+
+header .search-box input::placeholder {
+  color: #969696;
+}
+
+header .search-box input.activeErorr {
+  background-color: rgba(255, 0, 0, 0.555);
+}
+
+header .search-box input.activeErorr::-webkit-input-placeholder {
+  color: white;
+}
+
+header .search-box input.activeErorr:-ms-input-placeholder {
+  color: white;
+}
+
+header .search-box input.activeErorr::-ms-input-placeholder {
+  color: white;
+}
+
+header .search-box input.activeErorr::placeholder {
+  color: white;
+}
+
+header .search-box input.activeErorr:focus {
+  background-color: white;
+}
+
+header .search-box button {
+  cursor: pointer;
+  background-color: #2b2b2b;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+header .search-box button:hover {
+  background-color: #3f3f3f;
+}
+
+/* end header */
+/* start location box */
+.location-info {
+  background-color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  width: 90%;
+  padding: 10px 20px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 1000;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+    width: 80%;
+    padding: 15px 35px;
+  }
+}
+
+.location-info .box {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info .box {
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info .box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #96969678;
+    width: 1px;
+    height: 60px;
+  }
+}
+
+.location-info .box .box-name {
+  color: #969696;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info .box .box-name {
+    font-size: 14px;
+  }
+}
+
+.location-info .box .box-name + div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info .box .box-name + div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 25px;
+  }
+}
+
+.location-info .box .box-name + div p,
+.location-info .box .box-name + div span {
+  margin: 0;
+}
+
+.location-info .box p,
+.location-info .box span {
+  color: #2b2b2b;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .location-info .box p,
+  .location-info .box span {
+    font-size: 25px;
+    margin: 25px 0;
+  }
+}
+
+/* end location box */
+/* start the map */
+.the-map {
+  min-height: calc(100vh - 280px);
+}
+
+.the-map .leaflet-marker-icon {
+  margin-left: -10px !important;
+  margin-top: -31px !important;
+  width: 20px !important;
+  height: 30px !important;
+}
+
+.the-map .leaflet-interactive {
+  stroke: #453f9a;
+  fill: #5d80eb;
+}
+
+.the-map .leaflet-control-attribution {
+  display: none;
+}
+
+.the-map .leaflet-left {
+  left: 0px;
+  display: none;
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .the-map .leaflet-left {
+    display: block;
+  }
+}
+
+/* end the map */
+/*# sourceMappingURL=style.css.map */

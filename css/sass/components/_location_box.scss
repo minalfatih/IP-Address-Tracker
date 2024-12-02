@@ -1,0 +1,94 @@
+/* start location box */
+.location-info {
+  background-color: $White;
+  border-radius: $rounded-15;
+  -webkit-border-radius: $rounded-15;
+  -moz-border-radius: $rounded-15;
+  -ms-border-radius: $rounded-15;
+  -o-border-radius: $rounded-15;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 90%;
+  padding: 10px 20px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1000;
+  @include lg {
+    @media (min-width: #{$screen-lg-min}) {
+      flex-direction: row;
+      gap: 40px;
+      width: 80%;
+      padding: 15px 35px;
+    }
+  }
+  .box {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    @include lg {
+      @media (min-width: #{$screen-lg-min}) {
+        text-align: left;
+      }
+    }
+    &:not(:last-child)::after {
+      @include lg {
+        @media (min-width: #{$screen-lg-min}) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0%;
+          transform: translate(-50%, -50%);
+          background-color: #96969678;
+          width: 1px;
+          height: 60px;
+        }
+      }
+    }
+    .box-name {
+      color: $Dark-Gray;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      font-size: 12px;
+      @include lg {
+        @media (min-width: #{$screen-lg-min}) {
+          font-size: 14px;
+        }
+      }
+      & + div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            justify-content: flex-start;
+            margin-top: 25px;
+          }
+        }
+        p,
+        span {
+          margin: 0;
+        }
+      }
+    }
+    p,
+    span {
+      color: $Very-Dark-Gray;
+      font-weight: 700;
+      font-size: 20px;
+      margin: 5px 0;
+      @include lg {
+        @media (min-width: #{$screen-lg-min}) {
+          font-size: 25px;
+          margin: 25px 0;
+        }
+      }
+    }
+  }
+}
+/* end location box */
