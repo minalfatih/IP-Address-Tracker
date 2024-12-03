@@ -58,7 +58,7 @@ async function fetchData() {
       if (regexIP.test(inputValue.value) === true) {
         // fetch the map by the user input
         data = await fetch(
-          `http://ipinfo.io/${inputValue.value}?token=eabeacdaeeff6a`
+          `https://ipinfo.io/${inputValue.value}?token=eabeacdaeeff6a`
         );
 
         dataFile = await data.json();
